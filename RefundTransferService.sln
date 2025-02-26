@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "Logging\Logging.csproj", "{AA2CCF2F-8AD4-48F4-BF13-1F55E203143E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefundTransferService", "RefundTransferService\RefundTransferService.csproj", "{7AC6AA87-1D7E-4FBC-8900-F7F9BBA2C12A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefundTransferServiceTester", "RefundTransferServiceTester\RefundTransferServiceTester.csproj", "{73D53884-A526-4EB9-81BD-BCF849A24D1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA2CCF2F-8AD4-48F4-BF13-1F55E203143E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA2CCF2F-8AD4-48F4-BF13-1F55E203143E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA2CCF2F-8AD4-48F4-BF13-1F55E203143E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA2CCF2F-8AD4-48F4-BF13-1F55E203143E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AC6AA87-1D7E-4FBC-8900-F7F9BBA2C12A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AC6AA87-1D7E-4FBC-8900-F7F9BBA2C12A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AC6AA87-1D7E-4FBC-8900-F7F9BBA2C12A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AC6AA87-1D7E-4FBC-8900-F7F9BBA2C12A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73D53884-A526-4EB9-81BD-BCF849A24D1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73D53884-A526-4EB9-81BD-BCF849A24D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73D53884-A526-4EB9-81BD-BCF849A24D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73D53884-A526-4EB9-81BD-BCF849A24D1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8919B22C-1F0B-413E-847E-F4F2481C7A18}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.0.32.48:8585/tfs/defaultcollection2
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Logging\\Logging.csproj
+		SccProjectName1 = Logging
+		SccLocalPath1 = Logging
+		SccProjectUniqueName2 = RefundTransferService\\RefundTransferService.csproj
+		SccProjectName2 = RefundTransferService
+		SccLocalPath2 = RefundTransferService
+		SccProjectUniqueName3 = RefundTransferServiceTester\\RefundTransferServiceTester.csproj
+		SccProjectName3 = RefundTransferServiceTester
+		SccLocalPath3 = RefundTransferServiceTester
+	EndGlobalSection
+EndGlobal

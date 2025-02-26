@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RefundTransferService.Helper_Code.Constants
+{
+    public class ConstantHelper
+    {
+        private const string PublicKey = "<RSAKeyValue><Modulus>wOmcBUMLQU9EVavB8t/EWefZrWG+thJOI8ccyTrvcUcU/knO5OXMq7/we0turVjjM6gswsWwjPqqax9JHQdTR0B1VMVOOEKn/3HMOK6S/mZLF+XdEmd2g+6GRkS7sJiM9IKrfu8cYTawS7wgBhtW6/j5h1mj6ja4BSGBvoOozxzHWoFEfpulJ5JzEfhL6UqvNBnRe8eLP/rJKDYiYX2zX/r/cBPLCFyBs05nDrzuZ/1GNEisBYJ8COBV8UrxyE5Utw+wgSLwp+Jf2QWGatT4EANNVjUO+Nzz13cOCXJQ+XQIFDFTDVf4pNQPJeIRJc8QGZWndWkEEiX8AidgCmGnjQ==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>";
+        public const string PrivateKey = "<RSAKeyValue><Modulus>wOmcBUMLQU9EVavB8t/EWefZrWG+thJOI8ccyTrvcUcU/knO5OXMq7/we0turVjjM6gswsWwjPqqax9JHQdTR0B1VMVOOEKn/3HMOK6S/mZLF+XdEmd2g+6GRkS7sJiM9IKrfu8cYTawS7wgBhtW6/j5h1mj6ja4BSGBvoOozxzHWoFEfpulJ5JzEfhL6UqvNBnRe8eLP/rJKDYiYX2zX/r/cBPLCFyBs05nDrzuZ/1GNEisBYJ8COBV8UrxyE5Utw+wgSLwp+Jf2QWGatT4EANNVjUO+Nzz13cOCXJQ+XQIFDFTDVf4pNQPJeIRJc8QGZWndWkEEiX8AidgCmGnjQ==</Modulus><Exponent>AQAB</Exponent><P>4ZFdS9A6j/HDKxK3Emq8qVXS1LS5AwXGIbrbOG8lLHLLwsneMhiBdBw5QdcXQHJZ9Oc/JjQ+28Y/ETsc/FIxlZJBntSJiJUoNvKJaFXerxYhh6dNO/BqxhccSOdswz/gQqB0qkg5/jrSB6UasmbINVIF7mk6XdaOzJ0QgBG/X3s=</P><Q>2vBmecwFtWkt6Tp8b9lV5Bsm8Zqr8izZyQh+KjWwg2FwZdt1rH1u6IZtHh6LmAg6eAWH1MWfJ6gjrPNIzyvyOa/46L7KDmdvSwdbEfjDOuRJ2yWGGIM0I9XbAQPN3TKf30qScvPP5Lp13mxkUjJlrKPQ4Lg2zWNOjF0OfdXWIpc=</Q><DP>SVzg7h5sXZKw+lpc5oWGlMCQEJQytDP1i9TdJc6oVXuEn/bN6Jcly2C+kpZlPpWygj+Pv1ows4QX0P/b3ojRDaeC5iiUDrMMYEqjvCZphaJ6B0e3i+4WnBS6I0/5hMtKogDT0Ooqym/RDaF6PFnHdegWe8MHs6tryEqxKiYbiu8=</DP><DQ>v/yBEBrtgpgZ72QfDIG7xMxeiQzF7RaRX6033VG5WGwQgPFCLiDMKdD/TKMibA4DH45R/y3Qk5jot9eaqDj0Lsv17DqpupnPSS7JGGhY4oKflTFBdqtPBIGaizhHxMmI0eh1paHRUtSDWakZC88vw4TfPL+tJswHbCSJ+aSTIz8=</DQ><InverseQ>vVj+x7ssSIxrEPIoJVaQRB2UzC9drk1TljpADYFtiPkBZyxSo/n2KJzqO5KatCBkzvAZwKpANCsJbH2CQ81AcATa3ONnfgWeypV9uKcyZPD63F0VXwGbJM7AUVuU6zXCkStSEmRJ1io6N5ugtl30x0KmNmQNtNdJ3qanNtzJBtQ=</InverseQ><D>APot/CjWycHpCrYQCXbwu7Pc+m/gU3PMSYocrzhJNj2x8YfWMHqpisUyJq2/JcmpfP2BHIt71Xr/mgNSj38WAOpmrcNCHi7YQwcEjdT0ka1a/AgCErHLe+edboWynbZoIGT5EW+MqUFpqziMwPsqeY+NVA40Ml+MlxoQWjK4jDQK3gY3ulXUKmk23bBRhTC/mwlyhQsKz46CSeiEYCRJwE97LxPB0uKRXYA8aPgk3EsHrsENcI2ovr+cITSf+Qg2HN1nk6zVO3TpotO8B/iKPbnDSmbgVwR1cGatS6nkjwp1RAgetay7l2QSYTQPQDcg0LWKywIaax4TFVtVg++c0Q==</D></RSAKeyValue>";
+    }
+}

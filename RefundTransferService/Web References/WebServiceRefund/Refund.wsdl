@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://service.yaghut.modern.tosan.com/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://service.yaghut.modern.tosan.com/" />
+      <s:element name="NormalTransfer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SourceDepositNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DestinationDepositNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="DestinationComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SourceComment" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="YaghutTimeOut" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NormalTransferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NormalTransferResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DepositNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastTransactionResult" type="s1:statementResponseBean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://service.yaghut.modern.tosan.com/">
+      <s:complexType name="statementResponseBean">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="statementBeans" nillable="true" type="s1:statementBean" />
+          <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="totalRecord" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="statementBean">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="agentBranchCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="agentBranchName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="balance" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="branchCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="branchName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="paymentId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="referenceNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="registrationNumber" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="serial" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="serialNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="statementId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="transferAmount" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="NormalTransferSoapIn">
+    <wsdl:part name="parameters" element="tns:NormalTransfer" />
+  </wsdl:message>
+  <wsdl:message name="NormalTransferSoapOut">
+    <wsdl:part name="parameters" element="tns:NormalTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastTransaction" />
+  </wsdl:message>
+  <wsdl:message name="GetLastTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastTransactionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RefundSoap">
+    <wsdl:operation name="NormalTransfer">
+      <wsdl:input message="tns:NormalTransferSoapIn" />
+      <wsdl:output message="tns:NormalTransferSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTransaction">
+      <wsdl:input message="tns:GetLastTransactionSoapIn" />
+      <wsdl:output message="tns:GetLastTransactionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RefundSoap" type="tns:RefundSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NormalTransfer">
+      <soap:operation soapAction="http://tempuri.org/NormalTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTransaction">
+      <soap:operation soapAction="http://tempuri.org/GetLastTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RefundSoap12" type="tns:RefundSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NormalTransfer">
+      <soap12:operation soapAction="http://tempuri.org/NormalTransfer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTransaction">
+      <soap12:operation soapAction="http://tempuri.org/GetLastTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Refund">
+    <wsdl:port name="RefundSoap" binding="tns:RefundSoap">
+      <soap:address location="http://10.0.78.29/EnBankYaghut/refund.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RefundSoap12" binding="tns:RefundSoap12">
+      <soap12:address location="http://10.0.78.29/EnBankYaghut/refund.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
